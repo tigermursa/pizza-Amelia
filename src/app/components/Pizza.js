@@ -6,7 +6,7 @@ import { IoCloseOutline } from "react-icons/io5";
 
 const Pizza = ({ pizza }) => {
   return (
-    <div className="group py-2 px-4 xl:py-4 xl:px-2 rounded-xl">
+    <div className="group py-2 px-4 xl:py-4 xl:px-2 rounded-xl border">
       <Image
         width={270}
         height={270}
@@ -16,16 +16,16 @@ const Pizza = ({ pizza }) => {
       ></Image>
       {/* title */}
       <div>
-        <div className="text-xl font-bold mb-3 capitalize cursor-pointer">
+        <div className="text-xl font-bold mb-3 capitalize cursor-pointer border">
           {pizza.name}
         </div>
       </div>
       {/* description */}
-      <div className="text-sm font-medium min-h-[60px] mb-6">
+      <div className="text-sm font-medium min-h-[60px] mb-6 border">
         {pizza.description}
       </div>
       {/* price and button */}
-      <div className="mb-6 flex items-center justify-between">
+      <div className="mb-6 flex items-center justify-between border">
         <div className="hidden lg:flex text-xl font-semibold ">
           start at {pizza.priceSm}
         </div>
