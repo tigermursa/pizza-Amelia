@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import Image from "next/image";
 import { useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
+import PizzaDetails from "./PizzaDetails";
 
 Modal.setAppElement("body");
 //style
@@ -72,9 +73,13 @@ const Pizza = ({ pizza }) => {
             "bg-white w-full h-full lg:max-w-[900px] lg:max-h-[600px] lg:rounded-[30px] lg:fixed lg:top-[50%] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[-50%] outline-none"
           }
         >
-          <div onClick={closeModal} className="absolute z-30 right-2 top-2 hover:scale-110 duration-200 cursor-pointer">
+          <div
+            onClick={closeModal}
+            className="absolute z-30 right-2 top-2 hover:scale-110 duration-200 cursor-pointer"
+          >
             <IoCloseOutline className="text-4xl text-orange" />
           </div>
+          <PizzaDetails pizza={pizza} modal={modal} setModal={setModal} />
         </Modal>
       )}
     </div>
