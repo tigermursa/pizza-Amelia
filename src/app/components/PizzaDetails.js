@@ -47,7 +47,7 @@ const PizzaDetails = ({ pizza }) => {
         </div>
       </div>
       <div className="bg-pink-100 flex flex-col flex-1">
-        <div className="flex-1 p-2 text-center lg:text-left">
+        <div className="flex-1 p-2 text-center lg:text-left ">
           <div className="flex-1 bg-white overflow-y-scroll h-[46vh]  scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white pr-2">
             <div className="font-semibold">
               <h2 className="capitalize text-3xl mb-1">{pizza.name}</h2>
@@ -64,7 +64,7 @@ const PizzaDetails = ({ pizza }) => {
                 <span>{crust} crust</span>
               </div>
             </div>
-            <SizeSelection pizza={pizza} size={size} setSize={setSize}/>
+            <SizeSelection pizza={pizza} size={size} setSize={setSize} />
             <CrustSelection />
             <div>Choose Topping</div>
             <div>
@@ -72,13 +72,13 @@ const PizzaDetails = ({ pizza }) => {
                 return <Topping key={index} />;
               })}
             </div>
-            <div className="h-full flex items-center px-2 lg:items-end">
-              <button className="btn btn-lg gradient w-full  flex justify-center  gap-x-2 ">
-                <div>Add to cart for</div>
-                <div>${price}</div>
-              </button>
-            </div>
           </div>
+        </div>
+        <div className="h-full flex items-center px-2 lg:items-end">
+          <button className="btn btn-lg gradient w-full  flex justify-center  gap-x-2 ">
+            <div>Add to cart for</div>
+            <div>${price}</div>
+          </button>
         </div>
       </div>
     </div>
