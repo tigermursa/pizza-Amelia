@@ -67,7 +67,7 @@ const PizzaDetails = ({ pizza }) => {
             <SizeSelection pizza={pizza} size={size} setSize={setSize} />
             <CrustSelection crust={crust} setCrust={setCrust} />
             <div className="mb-4 text-xl font-semibold">Choose Topping</div>
-            <div className="flex flex-1 flex-wrap gap-2 py-1 justify-center lg:justify-start">
+            <div className="flex flex-1 flex-wrap gap-2 py-1 justify-center lg:justify-start ">
               {pizza.toppings?.map((topping, index) => {
                 return (
                   <Topping
