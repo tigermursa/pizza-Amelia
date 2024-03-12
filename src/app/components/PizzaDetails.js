@@ -66,7 +66,7 @@ const PizzaDetails = ({ pizza }) => {
             </div>
             <SizeSelection pizza={pizza} size={size} setSize={setSize} />
             <CrustSelection crust={crust} setCrust={setCrust} />
-            <div>Choose Topping</div>
+            <div className="mb-4 text-xl font-semibold">Choose Topping</div>
             <div>
               {pizza.toppings?.map((topping, index) => {
                 return <Topping key={index} />;
