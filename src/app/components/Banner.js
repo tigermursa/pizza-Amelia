@@ -1,8 +1,6 @@
-"use client"
+"use client";
 
 import { MouseParallaxContainer } from "react-parallax-mouse";
-
-
 
 const Banner = () => {
   return (
