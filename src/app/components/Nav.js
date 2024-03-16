@@ -16,13 +16,17 @@ const Nav = () => {
               <div className="font-robotoCondensed uppercase font-medium leading-none text-sm">
                 24/7 Pizza delivery service
               </div>
+              <div className="text-3xl font-robotoCondensed font-extrabold leading-none tracking-wide ">
+                920 234 5768
+              </div>
             </div>
-            <div>920 234 5768</div>
           </div>
           {/* cart */}
           <div className="relative cursor-pointer hidden lg:flex">
             <Image src={"bag.svg"} width={38} height={38} alt="" />
-            <div>3</div>
+            <div className="bg-tertiary w-6 h-6 rounded-full text-white flex justify-center items-center text-[13px] font-robotoCondensed absolute -bottom-2 -right-1">
+              3
+            </div>
           </div>
         </div>
       </div>
