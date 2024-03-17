@@ -1,8 +1,11 @@
+"use client";
+
 import { useContext } from "react";
 import { BsHandbagFill } from "react-icons/bs";
+import { CartContext } from "../context/CartContext";
 
 const CartMobileIcon = () => {
-  const { isOpen, setIsOpen } = useContext();
+  const { isOpen, setIsOpen } = useContext(CartContext);
   return (
     <div
       onClick={() => setIsOpen(!isOpen)}

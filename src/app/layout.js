@@ -1,7 +1,9 @@
 // css
+import CartMobile from "./components/CartMobile";
 import CartMobileIcon from "./components/CartMobileIcon";
 import Nav from "./components/Nav";
 import CartProvider from "./context/CartContext";
+
 import "./globals.css";
 
 import { Bangers, Quicksand, Roboto_Condensed } from "next/font/google";
@@ -30,6 +32,7 @@ export default function RootLayout({ children }) {
         >
           <Nav />
           <CartMobileIcon />
+          <CartMobile />
           {children}
         </body>
       </html>
