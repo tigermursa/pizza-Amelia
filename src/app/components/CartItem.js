@@ -1,4 +1,4 @@
-const CartItem = () => {
+const CartItem = ({ pizza }) => {
   return <div>CartItem</div>;
 };
 
