@@ -4,9 +4,11 @@ import { useContext } from "react";
 
 import CartTop from "./CartTop";
 import { CartContext } from "../context/CartContext";
+import CartBottom from "./CartBottom";
+import CartItem from "./CartItem";
 
 const CartMobile = () => {
-  const { isOpen } = useContext(CartContext);
+  const { cart, isOpen } = useContext(CartContext);
   return (
     <div
       className={`${
@@ -14,6 +16,12 @@ const CartMobile = () => {
       } bg-white fixed w-full h-full left-0 z-20 transition-all duration-300 lg:hidden flex flex-col`}
     >
       <CartTop />
+      <div>
+        {cart?.map((pizza, index) => {
+          return <CartItem key={index} />;
+        })}
+      </div>
+      <CartBottom />
     </div>
   );
 };

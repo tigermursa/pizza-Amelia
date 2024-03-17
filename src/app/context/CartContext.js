@@ -19,10 +19,22 @@ const CartProvider = ({ children }) => {
     size,
     crust
   ) => {
-    console.log(id, image, name, price, additionalTopping, size, crust);
+    additionalTopping.sort((a, b) => a.name.localeCompare(b.name));
+
+    const newItems = {
+      id,
+      image,
+      name,
+      price,
+      additionalTopping,
+      size,
+      crust,
+      amount: 1,
+    };
+    setCart([...cart, newItems]);
   };
   return (
-    <CartContext.Provider value={{ isOpen, setIsOpen, addToCart }}>
+    <CartContext.Provider value={{ isOpen, setIsOpen, addToCart, cart }}>
       {children}
     </CartContext.Provider>
   );
