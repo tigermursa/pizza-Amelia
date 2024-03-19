@@ -1,4 +1,5 @@
 // css
+import CartDesktop from "./components/CartDesktop";
 import CartMobile from "./components/CartMobile";
 import CartMobileIcon from "./components/CartMobileIcon";
 import Nav from "./components/Nav";
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
           <CartMobileIcon />
           <CartMobile />
           {children}
+          <CartDesktop />
         </body>
       </html>
     </CartProvider>
