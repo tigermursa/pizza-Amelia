@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import Modal from "react-modal";
 import CheckoutDetails from "./CheckoutDetails";
+import { IoCloseOutline } from "react-icons/io5";
 
 const modalStyles = {
   backgroundColor: "rgba(0,0,0,0.5)",
@@ -55,6 +56,12 @@ const CartBottom = () => {
           onRequestClose={closeModal}
           contentLabel="Checkout Modal"
         >
+          <div
+            onClick={closeModal}
+            className="absolute z-30 right-2 top-2 hover:scale-110 duration-200 cursor-pointer"
+          >
+            <IoCloseOutline className="text-4xl text-orange" />
+          </div>
           <CheckoutDetails />
         </Modal>
       )}
