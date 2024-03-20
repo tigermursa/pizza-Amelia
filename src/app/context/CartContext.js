@@ -31,10 +31,46 @@ const CartProvider = ({ children }) => {
       crust,
       amount: 1,
     };
-    setCart([...cart, newItems]);
+
+    const cartItemIndex = cart.findIndex(
+      (item) =>
+        item.id === id &&
+        item.price === price &&
+        item.size === size &&
+        JSON.stringify(item.additionalTopping) ===
+          JSON.stringify(additionalTopping) &&
+        item.crust === crust
+    );
+
+    if (cartItemIndex === -1) {
+      setCart([...cart, newItems]);
+    } else {
+      const newCart = [...cart];
+      newCart[cartItemIndex].amount += 1;
+      setCart(newCart);
+    }
+
+    //open the cart when user add a product
+
+    setIsOpen(true);
   };
+
+  //remove items
+  const removeItem = (id, price, crust) => {
+    const itemIndex = cart.findIndex(
+      (item) => item.id === id && item.price === price && item.crust === crust
+    );
+    if (itemIndex !== -1) {
+      const newCart = [...cart];
+      newCart.splice(itemIndex, 1);
+      setCart(newCart);
+    }
+  };
+
   return (
-    <CartContext.Provider value={{ isOpen, setIsOpen, addToCart, cart }}>
+    <CartContext.Provider
+      value={{ isOpen, setIsOpen, addToCart, cart, removeItem }}
+    >
       {children}
     </CartContext.Provider>
   );

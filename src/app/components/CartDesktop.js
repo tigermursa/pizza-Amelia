@@ -7,7 +7,7 @@ import CartItem from "./CartItem";
 import CartBottom from "./CartBottom";
 
 const CartDesktop = () => {
-  const { cart, isOpen } = useContext(CartContext);
+ 
   return (
     <div
       className={`${
