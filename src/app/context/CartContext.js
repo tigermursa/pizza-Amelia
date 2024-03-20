@@ -67,9 +67,49 @@ const CartProvider = ({ children }) => {
     }
   };
 
+  //increase items
+
+  const increaseAmount = (id, price) => {
+    const itemIndex = cart.findIndex(
+      (item) => item.id === id && item.price === price
+    );
+
+    if (itemIndex !== -1) {
+      const newCart = [...cart];
+      newCart[itemIndex].amount += 1;
+
+      setCart(newCart);
+    }
+  };
+
+  //decrease items
+
+  const decreaseAmount = (id, price) => {
+    const itemIndex = cart.findIndex(
+      (item) => item.id === id && item.price === price
+    );
+
+    if (itemIndex !== -1) {
+      const newCart = [...cart];
+
+      if (newCart[itemIndex].amount > 1) {
+        newCart[itemIndex].amount -= 1;
+      }
+      setCart(newCart);
+    }
+  };
+
   return (
     <CartContext.Provider
-      value={{ isOpen, setIsOpen, addToCart, cart, removeItem }}
+      value={{
+        isOpen,
+        setIsOpen,
+        addToCart,
+        cart,
+        removeItem,
+        increaseAmount,
+        decreaseAmount,
+      }}
     >
       {children}
     </CartContext.Provider>
