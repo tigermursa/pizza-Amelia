@@ -18,6 +18,14 @@ const CartProvider = ({ children }) => {
     setItemAmount(amount);
   });
 
+  //update cart total price
+  useEffect(() => {
+    const price = cart.reduce((a, c) => {
+      return a + Number(c.price) * c.amount;
+    }, 0);
+    setCartTotal(price);
+  }, [cart]);
+
   // add to cart
   const addToCart = (
     id,
@@ -119,6 +127,7 @@ const CartProvider = ({ children }) => {
         increaseAmount,
         decreaseAmount,
         itemAmount,
+        cartTotal,
       }}
     >
       {children}

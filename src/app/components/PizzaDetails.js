@@ -5,7 +5,7 @@ import CrustSelection from "./CrustSelection";
 import Topping from "./Topping";
 import { CartContext } from "../context/CartContext";
 
-const PizzaDetails = ({ pizza }) => {
+const PizzaDetails = ({ pizza, setModal }) => {
   const [size, setSize] = useState("small");
   const [crust, setCrust] = useState("traditional");
   const [additionalTopping, setAdditionalTopping] = useState([]);
@@ -85,7 +85,7 @@ const PizzaDetails = ({ pizza }) => {
         </div>
         <div className="h-full flex items-center px-2 lg:items-end">
           <button
-            onClick={() =>
+            onClick={() => {
               addToCart(
                 pizza.id,
                 pizza.image,
@@ -94,8 +94,9 @@ const PizzaDetails = ({ pizza }) => {
                 additionalTopping,
                 size,
                 crust
-              )
-            }
+              );
+              setModal(false);
+            }}
             className="btn btn-lg gradient w-full  flex justify-center  gap-x-2 "
           >
             <div>Add to cart for</div>
