@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 // cart context
 export const CartContext = createContext();
@@ -8,6 +8,15 @@ const CartProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [cart, setCart] = useState([]);
+  const [cartTotal, setCartTotal] = useState(0);
+  const [itemAmount, setItemAmount] = useState(0);
+
+  useEffect(() => {
+    const amount = cart.reduce((a, c) => {
+      return a + c.amount;
+    }, 0);
+    setItemAmount(amount);
+  });
 
   // add to cart
   const addToCart = (
@@ -109,6 +118,7 @@ const CartProvider = ({ children }) => {
         removeItem,
         increaseAmount,
         decreaseAmount,
+        itemAmount,
       }}
     >
       {children}
