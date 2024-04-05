@@ -49,7 +49,7 @@ const CheckoutDetails = ({ setModal }) => {
             Shipping & Checkout
           </h2>
           <div className="h-[86vh] lg:h-[47.5vh] flex flex-col lg:flex-row lg:gap-x-4 ">
-            <div className="bg-green-400/20 flex-1 h-full overflow-y-auto lg:overflow-visible py-4 px-8 lg:px-0">
+            <div className=" flex-1 h-full overflow-y-auto lg:overflow-visible py-4 px-8 lg:px-0">
               <div className="flex flex-col gap-4 h-full">
                 <div className="flex flex-col lg:flex-row justify-between gap-4 lg:gap-0 lg:gap-x-4">
                   <input
@@ -101,7 +101,7 @@ const CheckoutDetails = ({ setModal }) => {
                   <input
                     type="text"
                     className="w-full input"
-                    placeholder="Apartment No"
+                    placeholder="Flat No"
                   />
                 </div>
                 <div className="flex-1 h-full">
@@ -125,11 +125,11 @@ const CheckoutDetails = ({ setModal }) => {
                         className="flex justify-between text-[15px]"
                         key={index}
                       >
-                        <div className="flex gap-x-2">
+                        <div className="flex gap-x-2 ">
                           <div className="capitalize">{pizza.name}</div>
                           <div>{pizza.amount > 1 && `x ${pizza.amount}`}</div>
                         </div>
-                        <div>
+                        <div className="me-2">
                           {parseFloat(pizza.price * pizza.amount).toFixed(2)}
                         </div>
                       </div>

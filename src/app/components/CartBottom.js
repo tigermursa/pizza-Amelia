@@ -25,7 +25,7 @@ const CartBottom = () => {
   return (
     <div>
       {cart.length >= 1 ? (
-        <div className="px-6 py-3 lg:py-6 mt-auto">
+        <div className="px-6 py-3 lg:py-6 mt-auto ">
           <div className="flex items-center justify-between mb-6 text-lg font-semibold font-robotoCondensed">
             <div>Total:</div>
             <div>${parseFloat(cartTotal).toFixed(2)}</div>
@@ -49,7 +49,7 @@ const CartBottom = () => {
       {modal && (
         <Modal
           className={
-            "bg-white w-full h-full lg:ma-w-[900px] lg:max-h-[600px] lg:rounded-[30px] lg:fixed  lg:top-[50%] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[-50%] outline-none "
+            "bg-white w-full h-full lg:max-w-[900px] lg:max-h-[600px] lg:rounded-[30px] lg:fixed  lg:top-[50%] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[-50%] outline-none shadow-2xl shadow-black "
           }
           isOpen={modal}
           style={modalStyles}
