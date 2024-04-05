@@ -28,7 +28,7 @@ const CartBottom = () => {
         <div className="px-6 py-3 lg:py-6 mt-auto ">
           <div className="flex items-center justify-between mb-6 text-lg font-semibold font-robotoCondensed">
             <div>Total:</div>
-            <div>${parseFloat(cartTotal).toFixed(2)}</div>
+            <div><span className="font-extrabold">&#2547;</span>{parseFloat(cartTotal).toFixed(2)}</div>
           </div>
           <div className="flex flex-col gap-y-3">
             <button

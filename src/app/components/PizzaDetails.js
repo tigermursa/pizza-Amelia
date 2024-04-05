@@ -35,7 +35,7 @@ const PizzaDetails = ({ pizza, setModal }) => {
   }, [additionalTopping]);
 
   return (
-    <div className="flex flex-col lg:flex-row lg:gap-x-8 h-full md:p-8">
+    <div className=" flex flex-col lg:flex-row lg:gap-x-8 h-full md:p-8">
       <div className="lg:flex-1 flex justify-center items-center">
         <div className="max-w-[300px] lg:max-w-none mt-6 lg:mt-0 ">
           <Image
@@ -50,7 +50,7 @@ const PizzaDetails = ({ pizza, setModal }) => {
       </div>
       <div className=" flex flex-col flex-1">
         <div className="flex-1 p-2 text-center lg:text-left ">
-          <div className="flex-1 bg-white overflow-y-scroll h-[46vh]  scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white pr-2">
+          <div className="flex-1 bg-yellow-100 bg-opacity-0 overflow-y-scroll h-[46vh]  scrollbar-thin scrollbar-thumb-secondary scrollbar-track-yellow-100 pr-2">
             <div className="font-semibold">
               <h2 className="capitalize text-3xl mb-1">{pizza.name}</h2>
               <div className="mb-6 text-lg font-medium">

@@ -29,7 +29,7 @@ const Topping = ({ topping, additionalTopping, setAdditionalTopping }) => {
     <div
       className={`${
         isChecked && "border-orange"
-      } w-full max-w-[110px] h-[140px] p-1 flex flex-col items-center justify-center border rounded-md bg-white relative`}
+      } w-full max-w-[110px] h-[140px] p-1 flex flex-col items-center justify-center border rounded-md bg-yellow-100 shadow-md  relative`}
     >
       <Image
         src={topping.image}

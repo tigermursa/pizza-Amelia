@@ -47,6 +47,7 @@ const Pizza = ({ pizza }) => {
       <div className="mb-6 flex items-center justify-between ">
         <div className="hidden lg:flex text-xl font-semibold ">
           start at {pizza.priceSm}
+          <span className="font-extrabold">&#2547;</span>
         </div>
         <button
           onClick={openModal}
@@ -59,7 +60,7 @@ const Pizza = ({ pizza }) => {
           onClick={openModal}
           className="btn btn-sm gradient text-sm lg:hidden px-3"
         >
-          starts at {pizza.priceSm}
+          starts at  {pizza.priceSm}<span className="font-extrabold">&#2547;</span>
         </button>
       </div>
       {/* div */}
@@ -70,7 +71,7 @@ const Pizza = ({ pizza }) => {
           onRequestClose={closeModal}
           contentLabel="Pizza Modal"
           className={
-            "bg-white w-full h-full lg:max-w-[900px] lg:max-h-[600px] lg:rounded-[30px] lg:fixed lg:top-[50%] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[-50%] outline-none"
+            "bg-yellow-100 bg-opacity-95 w-full h-full lg:max-w-[900px] lg:max-h-[600px] lg:rounded-[30px] lg:fixed lg:top-[50%] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[-50%] outline-none"
           }
         >
           <div

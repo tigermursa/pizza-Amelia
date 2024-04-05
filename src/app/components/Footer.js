@@ -9,13 +9,15 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-primary bg-pattern py-16">
+    <footer className="bg-black bg-pattern py-16">
       <div className="container mx-auto">
         {/* logo */}
         <div className="text-white flex flex-col items-center gap-y-6 justify-center">
-          <Link href="#">
-            <Image src="/logo.svg" width={180} height={180} alt="" />
-          </Link>
+        <Link href={"#"} className="">
+          <div className="text-white text-3xl font-extrabold">
+            <h1>AMILINA<span className="text-secondary font-quicksand">PIZZA</span></h1>
+          </div>
+        </Link>
           <div className="flex gap-x-6 text-xl text-white">
             <Link href="#">
               <FaYoutube />
@@ -31,7 +33,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="text-white font-medium">
-            Copyright &copy; Pizzaland 2023. All rights reserved.
+            Copyright &copy; Amelinapizza 2023. All rights reserved.
           </div>
         </div>
       </div>
