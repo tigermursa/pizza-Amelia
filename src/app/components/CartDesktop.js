@@ -12,7 +12,7 @@ const CartDesktop = () => {
     <div
       className={`${
         isOpen ? "left-0" : "-left-full"
-      } bg-yellow-100 shadow-black fixed top-0 bottom-0 w-[500px] shadow-2xl hidden lg:flex flex-col transition-all duration-300 `}
+      } bg-yellow-100 shadow-black  fixed top-0 bottom-0 w-[500px] shadow-2xl hidden lg:flex flex-col transition-all duration-300 `}
     >
       <CartTop />
       <div

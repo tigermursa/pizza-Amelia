@@ -13,7 +13,7 @@ const Nav = () => {
         {/* logo */}
         <Link href={"#"} className="">
           <div className="text-white text-3xl font-extrabold">
-            <h1>AMILINA<span className="text-secondary font-quicksand">PIZZA</span></h1>
+            <h1>AMELINA<span className="text-secondary font-quicksand">PIZZA</span></h1>
           </div>
         </Link>
         <div className="text-white flex gap-x-8 items-center">

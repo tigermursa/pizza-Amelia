@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="text-white flex flex-col items-center gap-y-6 justify-center">
         <Link href={"#"} className="">
           <div className="text-white text-3xl font-extrabold">
-            <h1>AMILINA<span className="text-secondary font-quicksand">PIZZA</span></h1>
+            <h1>AMeLINA<span className="text-secondary font-quicksand">PIZZA</span></h1>
           </div>
         </Link>
           <div className="flex gap-x-6 text-xl text-white">
