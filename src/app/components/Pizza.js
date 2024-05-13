@@ -83,6 +83,7 @@ const Pizza = ({ pizza }) => {
           <PizzaDetails pizza={pizza} modal={modal} setModal={setModal} />
         </Modal>
       )}
+      {/* updated */}
     </div>
   );
 };
